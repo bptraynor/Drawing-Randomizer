@@ -1,0 +1,22 @@
+{
+  "name": "drawing",
+  "version": "1.0.0",
+  "description": "Drawing Idea Randomizer",
+  "main": "index.js",
+  "dependencies": {
+    "electron": "^1.6.11",
+    "electron-prebuilt": "^1.4.13",
+    "electron-packager": "^8.7.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-winstaller": "^2.6.3"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
+  },
+  "scripts": {
+    "start": "electron ."
+
+  },
+  "author": "Nacho",
+  "license": "ISC"
+}

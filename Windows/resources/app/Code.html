@@ -1,0 +1,424 @@
+<!doctype html>
+<html>
+<head>
+<title>What Should I Draw</title>
+<style>
+body {
+  overflow-y: hidden ! important;
+  overflow-x: hidden ! important;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+p {text-align: center;}
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    top: 50%;
+}
+
+.buttonz {
+    background-color: #8C0101;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    top: 50%;
+}
+
+.wrapper {
+    text-align: center;
+    }
+
+.demo {
+    text-align: center;
+    color: #008CBA;
+    text-transform: uppercase;
+    font-size: 300%;
+
+    }
+
+.remo {
+    text-align: center;
+    color: #008CBA;
+    text-transform: uppercase;
+    font-size: 300%;
+    }
+
+.temo {
+    text-align: center;
+    color: #4CAF50;
+    text-transform: uppercase;
+    font-size: 200%;
+    }
+
+.zemo {
+    text-align: center;
+    color: #4CAF50;
+    text-transform: uppercase;
+    font-size: 200%;
+    }
+
+.kemo {
+    text-align: center;
+    color: #4CAF50;
+    text-transform: uppercase;
+    font-size: 200%;
+
+    }
+
+.uemo {
+    text-align: center;
+    color: #4CAF50;
+    text-transform: uppercase;
+    font-size: 200%;
+
+    }
+
+.wemo {
+  text-align: center;
+  color: #8C0101;
+  text-transform: uppercase;
+  font-size: 200%;
+}
+.buttons {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    top: 50%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<input class="button" type="button" value="Randomize Subject" onclick="getRandomArrayElements(3);" />
+<input class="button" type="button" value="Randomize Restriction" onclick="getRandomArrayElementz(1);" />
+</div>
+<p id="demo" class="demo"></p>
+<p id="remo" class="remo"></p>
+
+
+
+<script>
+
+function getRandomArrayElements(count) {
+
+
+var arr = ['Swamp','Tank','Claws','Flying Tank','Young Woman','Little Girl','Woman','Old Woman','Young Boy','Little Boy','Man','Old Man',
+'Inside Home','Android','Jetplane','Flying Fortress','Post-Apocalyptic','Zombie','Zombie Apocalypse','Vampire','Werewolf','Out In Nature',
+'Hostile Area','Demon','Horns','Superhero','Swimwear','Goblin','Knife','Magic','Giant Robot','Giant Animal','Angel Wings','Devil Wings',
+'Detective','Cop','Punk','Goth','Harpoon','Missing Limb','Fan-Art','Gun','Futuristic Gun','Horse Riding','Scales','3 or More Legs',
+'3 or More Eyes','Norse','Legendary Creature','Amphibian','Invertebrea','Mammilian','Reptilian','Oceanic','Astronaut','Spacesuit','Spaceship',
+'Mask','Hood','Gloves','Hoodie','Glasses','Goggles','Hat','Scarf','Siikh Headdress','Burka','Robot Hands','Cavalier','Club','Sword','Knife',
+'Samurai','Barbarian','Viking','Knight','Car','Fur Clothing','Helmet','Spear','Cape','Seductive','Talisman','Object of Power','Fangs','Jaws',
+'Archaic Helmet','Bullwhip','Alien Attributes','Spikes','Crown','Potion','Half Mask','Full Mask','Gas Mask','Jetpack','Musical Instrument',
+'Animal Companion','Organic Armor','Samurai Armor','Knight Armor','Cutesy','Cybernetic Eye','Boots','Waistcoat','Jumpsuit','Petticoat',
+'Leather','Bow and Arrow','Crossbow','Musket','Chainsaw','Butcher Knife','Machine Gun','Laser Sword','Laser Gun','Aquatic','Fire-Based',
+'Water-Based','Sky-Based','Earth-Based','Forest Creature','Magical','King','Monkey','Random Animal','Ice-Based','Jungle','Reinvent','Reinvent',
+'pin-up','Element-Based Human','Fantasy Villian','Reinvent Superhero','Movie Monster','Kaiju','Self-Portrait','Reinvent Self','Suit and Tie','Flamethrower',
+'Hood','Fairy','Fairy Wings','Butterfly Wings','Tribal Jewelry','Gems','Metalman','Elf','Half-Plant','Plant Attributes','Tattoos','Insect-Based',
+'Insect Attributes','Military Dress/Uniform','Breathing Apparatus','Mechanical Wings','Piercings','Bandages','Injuries','Earth or Stone Based',
+'Metallic','Riot Gear','Sniper Rifle','Internal Power Source','Tiger','Dinosaur','Magic Imbued','Long Hair','Short Hair','Royalty','high class',
+'poor character','street kid','throne','throneroom','night','redhead','blonde','brunette','colorful hair','rainbow','spirit companion','ghost companion',
+'ring around character','black character','white character','indian character','asian character','latino character','arabic character','fat','skinny','sexy',
+'seductive','sexual appeal','alphamale','alphafemale','amazonian','half animal-half human','staff','commando','glowing eyes','spirit','animal spirit',
+'massive beard','exotic facial hair','animal hunter','killer for hire','precious metal armor','seer','wiseman','explorer','pirate','animal humans',
+'undead','dwarf','ogre','troll','dragon','golem','yakuza','mafia','liberty spikes','monk-warrior','extinct animal','futuristic car','old car', 'rusted android',
+'rust robot','french maid','anime features','evil attributes','robotic animal','visor','bandana','boots','diseased','disfigured','animals as machine','metal monster',
+'giant animal','skull','arms as wings','long tongue','assassin','chivalry','lava-based','skinpaint','voodoo','witch-doctor','fairy tale','warhammer','battleaxe','warmace',
+'giant clash','crabclaws','stinger','mermaid','merman','necromancer','heavily-armored','warrior-woman','skeleton warrior','plant monster','flying-based','floating','floating object',
+'biker','motorcycle babe','abstract proportions','modern fashion','normal modern attire','amish fashion','ancient history apparel','farmer',
+'religious','ritual','goddess','god','mystical','nymph','ent','forest protector','griffin','pegasus','fenrir','kraken','phoenix','herder',
+'psycho','murderer','shy','weak','seductress','boytoy','lance','rapier','dagger','prostitute','chain-gang','mecha','haunted','caravan','hoodlum',
+'tail','enchantment','enchanted weapon','guardian','lightning-based','bony','monarch','fighter','boxer','lady of the lake','urban','wicked witch',
+'ghost','cowboy','cowgirl','empress','prisoner','dia de los muertos','burlesque dancer','red riding hood','beauty','collosus','sidekick',
+'male sidekick','female sidekick','geisha','pilot','airship','airship pilot','artist','vampire hunter','bard','druid','princess','antogonist',
+'yin and yang','medusa','plague doctor','genie','four horsemen of the apocalypse','amaterasu','pin-up','extraterrestial','alien','shapeshifter',
+'warlord','icarus','rain god','thunder god','king','knights of the round table','siamese twins','supervillian','bogeyman','sandman','outlaw',
+'newborn','baby','child','carnivale','harem','kitsune','junk','junkyard','robin hood','captain','hacker','immortal','subterranean','underground',
+'queen','warrior','intergalactic','aphrodite','wedding','royal wedding','archangel','fallen angel','wasteland','leviathan','eskimo','satan','queen',
+'tyrant','gremlin','woodland creature','desert animal','mountain animal','snow animal','spider','royal family','mother nature personified','father time personified',
+'mech','animal tamer','headdress','non-natural skin color','corset','mind control','rage','nearly nude','nude','fetishism','cute','skeletons','loveable','night elf',
+'injury','injured','stripper','rugged','eyepatch','facemask','robot hands','demon-warrior','skull-warrior','exotic hairstyle','chivalrous', 'centaur', 'rivals',
+'female barbarian','oracle','paladin','female knight','pirate captain','female pirate captain','dygour','dual-wield','bikini','t-shirt','body paint','warpaint',
+'scar','scars','ant-sized','turtle-neck sweater','earrings','bodysuit','staff','mage','wizard hat','afro','full body tattoo','hoodie','dancer','indian dancer','belly dancer',
+'teenage','teenager','elderly','crippled','saint','tentacle','tentacles','foxtails','clown','jester','robot superhero','huge gun','rocket launcher','unusual mount',
+'oni','staff','floral headdress','goofy','cocky','sassy','whip','S&M','sundress','dress','romper','kimono','headphones','plant attire','prom dress','ballroom gown',
+'tuxedo','umbrella','necklace','bounty hunter','school outfit','teacher outfit','book-wielding','hidden blade','commando','bounty hunter','warlord','postman','truck driver',
+'wizard','funny mustache','funny beard','comic relief','archer','rogue','bandit','sniper','unstoppable force','juggernaut','bird','hawk','fox','crocodile','rhino','elephant',
+'tiger','whale','fish','dolphin','shark','manta ray','octopus','squid','deep-sea','mouse','moth','spider','praying mantis','monkey','guerrilla','lion','squirrel','deer','raccoon',
+'possum','skunk','hippo','killer whale','bear','grizzly bear','mammoth','bird','eagle','t-rex','raptor','avian','bird-creature','american animal','european animal','asian animal',
+'african animal','middle-eastern animal','austrailian animal','arctic animal','jungle animal','scimitar','blowpipe','longsword','enchanted weapon','enchanted sword','battlefield',
+'warzone','glamour model','robot pirate','road trip','adventurer','bunny ears','cat ears','animal ears','boxing gloves','robot companion','army general','shield','two-handed shield',
+'animal headdress','fur jacket','facepaint','creepy','creepy smile','kilt','sari','lederhosen','dirndls','Maasai beadwork','Sami clothing','cone hat','flamenco dress','hanfu','poncho',
+'miniature','ant-sized','hipster','redneck','nerd','jock','emo','preppy','bald','bone necklace','trophy necklace','wedding dress','alien eyes','no pupils','lovers','couple','briefcase',
+'backpack','schoolgirl','forest guardian','erotic','lifestealer','rapper','terrorist','soldier','depressed','bookworm','cop','police','marionette doll','plush','toy','nuclear','radioactive',
+'native american deerskin','maori','plushie','tusk','cornrows','parachute','headband','armsleeve','lasso','hero','anti-hero','tragic hero','beard','cyclops','bubblegum bubble','ghost samurai',
+'possessed toy','pranker','swamp monster','sludge monster','alien invader','archfiend','artifact of power','cyber','cyberspace','katana','scythe','bagh naka','gauntlets','power gauntlets',
+'war fan','spike armor','flail','ninja star','sling','axe','javalin','sickle','charkram','sai','tomahawk','shieldweapon','magic-wielder','Bō','trident','longbow','kunai','fossil','animal charmer',
+'time traveler','black mage','white mage','gang leader','dark lord','elemental','gambler','monster hunter','berserk','berserker','martial artist','forbidden magic','tech-reliant','secret agent',
+'space traveler','gorgon','luchador','kabuki actor','gravekeeper','harpie','guard','bodyguard','speedster','super strength','teleporter','invisibility-power','super-sight','pyromancer','cryomancer',
+'genius','water-breathing','jurrasic','puppet-master','puppetier','parasite','circus clown','venus fly trap','maneater','prophet','tanuki','scrap','slime','sphynx','venomous','statue','stone','cartoon',
+'cartoon character','trickster','athlete','vigilante','wind-up','worm','halloween','christmas','mime','beauty and the beast','birthmark','blood brothers','blackbeard','bride','gravedigger','smoke powers',
+'mounted archer','nobility','full-body tattoos','raider','animal-design armor','future soldier','female mage','skull mace','twin daggers','trophy necklace','apache','swamp monster','seven deadly sins',
+'angry','sad','depressed','happy','celebrating','blind','deaf','fear','giant warrior','cloak','thigh heighs','flute','guitar','drummer','rock-band','monocle','phalanx','cataphract','janissary','swiss pikemen',
+'ashigaru','winged hussar','jaguar warrior','gladiator','Cherokee','Comanche','Zande Warrior','Zulu','Aztec Warrior','Maori Warrior','handfan','tusks','scuba','scubasuit','atlantean','un-natural hair color',
+'tank top','trenchcoat','family crest','hairbun','horn','choker','tube-top','garter belt','french-maid','magical instrument','harp','adult','boy','pregnant','blacksmith','merchant','rocker','punk rocker',
+'cavalry','non-horse cavalry','priest','monk','warrior-monk','voodoo-priest','light-weapon','sailor scout','pistol','pistols','revolver','shotgun','sniper','magic gun','smoking','fishnets','cigar','glowing eyes',
+'hillbilly','redneck','ape','deer','duck','rabbit','snake','chicken','shroud','gangster outfit','feather dress','robot arm','varsity jacket','mascot','cowboy hat','lumberjack','lumberjack beard','lab coat',
+'eye scar','headband','wood-based','anime-eyes','centurion','quirky','emo','jock','popular girl','popular boy','nerd','psychopath','insane','magic carpet','nose piercing','alcoholic','fat','obese','anorexic',
+'jack-o-lantern','santa','reindeer','easter bunny','headless horsemen','snowman','half-animal','half-fish','half-bird','half-mammal','half-reptile','giant needle','khakkhara','long hair','short hair','afro',
+'comical mustache','catsuit','lingerie','nightgown','pajamas','shawl','swim clothing','thong','jeans','shorts','panties','coat','kasaya','school uniform','veil','turban','tracts','behemoth','leggings',
+'chimaera','lady of the lake','ganesha','shiva mudra','wood nymph','ryujin','dullahan','valkyrie','sobek','egyptian diety','loki','titan','sekhmet','Tamamo-no-Mae','succubus','poseidon','hydra','Ra',
+'banshee','pixie','wendigo','manticore','pixiu','dark elf','high elf','jorogumo','imp','leprechaun','sphinx','yeti','grim reaper','oni','vishnu','devi','knight of the round table','excalibur','Khepri',
+'umibozu','Morgan le Fay','Manjushri','Naga','Nagini','thanatos','denglong','chiwen','mahakali','li jing','jinn','bard','shaman','thief','healer','minigun','riot-gear','seer','sage','un-natural eye color',
+'galactic','space-themed','dominatrix','European ethnicity','African Ethnicity','Latino Ethnicity','Indian Ethnicity','Native American Ethnicity','Asian Ethnicity','heavy-set woman','heavy-set man','elder',
+'retired','chef','librarian','teacher','instructor','mechanic','maid','carpenter','lawyer','bartender','firefighter','end of battle','dirty clothes','muscular','scrawny','supermodel','playboy','miner',
+'angler','alchemist','alchemy','time mage','beast hunter','beast tamer','blue mage','red mage','green mage','dark knight','swashbuckler','dragon knight','weapon master','templar','duelist','sentinel',
+'holy knight','holy creature','illusion mage','illusionist','nature magician','druid','gambler','lone wanderer','shadow','trapper','engineer','gunslinger','psychic','psychic powers','mastery over nature',
+'mastery over weather','mind controller','squire','adventure duo','twins','two man party','guild','medic','kung-fu','karate','karate master','taekwando','taekwando master','kickboxer','boxer','muay thai',
+'judo','wrestler','strongman','bodybuilder','fencer','lightning-user','fire-user','water-user','earth-user','wind-user','storm-user','lava-user','element-user','space marine','pet','wildman','wild-man',
+'russian','civilian','boss','final boss','giant hands','spider','pinata','poison','toxic','poison-darts','poison mage','poisoned weapon','fists','bare-handed','bare-boxer','mom','dad','grandma','grandpa',
+'bad-guy','protagonist','antagonist','demonic','imposter','badass','immortal','divine','divinity','godly','cannibal','dead','secret agent','exotic weapon','leash','explosion mage','explosive expert','tomb raider',
+'graverobber','hitchhiker','paratrooper','parachute','giant horror','gimpsuit','big bad wolf','cursed','plagued','evil sorcerer','fairy godmother','fairy godfather','godfather','gender flip','gingerbread man',
+'gingerbread woman','glass slipper','goldilocks','invisible','knight in shining armor','little red riding hood','fugitive','beautiful','attractive','brat','spoiled rotten','secret identity','humanoid','wicked witch',
+'corrupt','corrupted','ancient evil','belly mouth','Dracula','Alucard','evil artifact','holy artifact','summoning artifact','high-heels','chupacabra','conjoined twins','creepy','bloody','injured',
+'pale-skinned','raven-haired','colorful hair','evil technology','tinker','butler','third-eye','gypsy','hockey mask','machete','infernal','girl scout','boy scout','mummy','mannequin','occult',
+'puppet','zombies','sadist','masochist','scarecrow','scorpion','symbiotic','symbiotic relationship','serial killer','spooky','bone-necklace','urban legend','lovestruck','romance','human-weapon',
+'spy','chestplate','decorative chestplate','fancy armor','decorative armor','samurai armor','camo','street clothes','champion','metalman','metal-based','spandex','leotard','ninja star','mechanical man',
+'robotic man','celestial','galaxy-creator','space-god','executioner','predator','undying','eternal youth','arcane','time manipulator','gargoyle','water-dweller','drinker','intoxicated','ent','enlightened',
+'ponytail','strongwoman','magical girl','hook hand','weapon for hand','cyberninja','buzzcut','mohawk','liberty spikes','goatee','dreadlocks','short hair','long hair','ballcap','horned helmet','wristband',
+'coconut bra','seashell bra','throwing daggers','sailor moon outfit','side-shaved hair','swimsuit','cowboy boots','unnatural skin color','urban outfit','country outfit','rapper','demon-girl','demon-boy',
+'overalls','suspenders','skirts','kurta','sombrero','carnivale dress','Inkanyamba','Dybbuk','Tsuchinoko','Kelpie','Arachne','Lou Carcolh','yara-ma-yha-who','Space Captain','Explorer','Hooded Figure',
+'Element Controller','Stone Person','Space Marine','Space Pirate','Organic Technology',''
+
+];
+    var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+    while (i-- > min) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+document.getElementById("demo").innerHTML=shuffled.slice(min);
+}
+
+</script>
+
+<div>
+
+  <script>
+
+  function getRandomArrayElementz(count) {
+
+
+var arr = ['Steampunk Setting','Horror Setting','Cartoon','90s Anime Aesthetic','Cheesy','Japanese Wood Block','Renaissance Painting','Early Christian Art',
+'Hinduism Art aesthetic','Islamic Art aesthetic','African Art aesthetic','Studio Ghibli aesthetic','Old School Disney','Egyptian Art','Greek Art','Roman Art','Persian Art',
+'Celtic Art','Incan Art','Chinese Art','Japanese Art','Russian Art','Middle East Art','Victorian Art','Futuristic','Cosmic','No Reference Images','Wood Block','Watercolor','Role Reversal',
+'Comic Book','Poster','Graphic Novel','Childrens Book','No Line Work','No Underdrawing','Highly Detailed Line Work','Video Game Art','Saturated Colors Only','Desaturated Color Only',
+'Only Big Brushes','Only small brushes','Rotate Canvas forty-five degrees','Paint Canvas Upside Down','Birds-Eye View','Ants-Eye View','cubism','Two point perspective','Three point perspective',
+'One point perspective','abstract anatomy','Make a Storyboard','Make a Color Key','Pick only five colors','Pick only three colors','Do a value study before painting','Use Non Dominant Hand',
+'Pick a mood','Low Contrast','High Contrast','No Erasing/Redoing','Gothic Artstyle','Byzantine Artstyle','Rococo Artstyle','Expressionism Artstyle','Surrealism','Tang Dynasty Aesthetic',
+'Ming Dynasty Aesthetic','Nihonaga Artstyle','Street Artstyle','Impressionism','Futuristic','Poster Design','15 Minute Timelimit','30 Minute Timelimit','1 Hour Timelimit',
+'2 Hour Timelimit','4 Hour Timelimit','Full Day Painting','Multi-Day Painting','Primary Colors Only','Complimentary Colors Only','Purples Only',
+'Greens Only','Modern Anime Aesthetic','Blues Only','Reds Only','Oranges Only','Triadic Colors Only','Monocromatic Only','Analogous Colors Only',
+'Black and White','Only Warm Colors','Only Cool Colors','Secondary Colors','Analogous Colors','Reds Only','Blues Only','Yellows Only','Only Greys',
+'Purples Only','Greens Only','High-Key Only','Low-Key Only','Graffiti','No Blending','Only Blending','One Brush','Fantasy','Sci-Fi','Retro-Futuristic',
+'High Fantasy','Western','Comedy','Satirical','Noire','Mayan Inspired','Native American Inspired','Indian Influence','Christian Art','Buddhist Art',
+'Pre-History',
+
+
+
+  ];
+      var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+      while (i-- > min) {
+          index = Math.floor((i + 1) * Math.random());
+          temp = shuffled[index];
+          shuffled[index] = shuffled[i];
+          shuffled[i] = temp;
+      }
+  document.getElementById("remo").innerHTML=shuffled.slice(min);
+  }
+
+  </script>
+
+<div class="wrapper">
+<input class="buttons" type="button" value="Randomize Type of Landscape" onclick="getRandomArrayElementa(1);" />
+<input class="buttons" type="button" value="Randomize Man Made Element" onclick="getRandomArrayElementb(1);" />
+<input class="buttons" type="button" value="Randomize Time of Day" onclick="getRandomArrayElementc(1);" />
+<input class="buttons" type="button" value="Randomize Weather" onclick="getRandomArrayElementd(1);" />
+
+<p id="kemo" class="kemo"></p>
+<p id="uemo" class="uemo"></p>
+<p id="zemo" class="zemo"></p>
+<p id="temo" class="temo"></p>
+
+
+</div>
+
+
+<script>
+
+function getRandomArrayElementa(count) {
+
+
+var arr = ['Canyon','Grand Canyon','Beach','Cliff','Mountain Range','Single Mountain','Farmland','Terrace Farm','Dirt Road','Creek','Stream','River','Dirty River','Delta','Lake','Tall Grass','Grassland',
+'Island','Volcano','Swamp','Forest','Ocean','Underwater','Deep Ocean','Barrier Reef','Arctic','Alien Landscape','Alien Planet','Artificial Planet','Hot Springs','Cave','Cave System','Mountain Cove','Cove','Pirate Cove',
+'Archipeligo','desert arches','sand dunes','cryovolcano','oasis','Waterfall','Multiple Waterfalls','Glacier','Iceburg','Frozen Lake','Frozen River','Rainforest','Tropical Rainforest','Jungle','Jungle Mountain','Chinese Mountains',
+'Ice Cave','Pammukale','Glow Worm Cave','Deadvlei','glory pool','desert forest','mystical forest','Mordor','Black Sand Beach','Non Natural Beach','Turquoise Ice','Redwood Trees','Redwood Forest','Massive Trees','Moss Forest',
+'Moss','Lagoon','rocky beach','stone forest','elder tree','giants causeway','ice towers','Sarisariñama Sinkholes','Chocolate Hills','Tundra','Prairie','Cliff Beach','Taiga','wetland','hills','Dragon Blood Tree Forest',
+'Island Chain','Crystal Clear Water','Dunes','Holy Mountain','Holy Landscape','Crater','Mesa','El Dorado','Fountain of Youth','Jungle Mountain','Desert Mountain','Arctic Mountain','Crater Lake','Pantanal','Tropical Wetland',
+'Cliffs of Dover','Tsingy de Bemaraha','Grassland River','Plains River','Mountain Valley','Valley','Coast','Shrubland','Woodland','Moors','Open Woodland','Dense Forest','Dense Woodland','Pine Forest','Eucalpyt Forest','Caddo Lake',
+'Jeju Island','Iguazu Falls','Canyon River','Arctic Waterfall','Arctic Rapids','Rapids','Wildflower Valley','Wildflowers','Sunflowers','Swiss Alps','Creepy Forest','Cobweb Forest','Millaa Millaa Falls','Rice Paddy','Meadow','Green Meadow',
+'Prairie Farm','Backyard','Ice Age','Dinosaur Era','Meteors','Meteorshower','Thick Jungle','single tree','floating islands','multiple suns','multiple moons','palm trees','winter forest','Fall Forest','Fall Trees','First day of spring',
+'dead trees','tree collapse','underwater swamp','ice cliffs','grapevines','vinery','moon','not-earth','alien planet','planet','wheatfield','forest mountains','lillypad','pond','stream','thorn forest','sakura blossom',
+'savannah','Foggy Mountain Range','Cold Rainforest','Iceberg','Dunes','Mesa','Oasis','Canyon','Lake','Jungle','Wildfire','Geyser','Marsh','Isthmus','Cove','Frozen Tundra','Fjord','Palm Trees','Kelp Forest','Coral Reef',
+
+
+
+
+
+];
+    var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+    while (i-- > min) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+document.getElementById("kemo").innerHTML=shuffled.slice(min);
+}
+
+</script>
+
+<div>
+
+  <script>
+
+  function getRandomArrayElementb(count) {
+
+
+  var arr = ['Cityscape','Futuristic Cityscape','Futuristic City','Futuristic Cityscape','Luxury City','City','Cabin','Haunted House','Suburb','Culdesac','Rusting Cars','Abandoned City','Abandoned Building',
+'Abandoned Hospital','Ghetto','Slum','Backalley','Western Town','Sewer','Castle','Watchtower','Fantasy Castle','Floating Castle','Sci-Fi Castle','Poor City','Yurt','Caravan','Sanctuary','Church','Portal','Time Portal',
+'Dimension Portal','Abandoned House','Mansion','City Walls','Walls','Fortress','Japanese Castle','Great Wall','Adobe Houses','Mosque','Space Station','Space Elevator','port','shrine','farmland','terrace farm','Barn',
+'farmhouse','Artificial Planet','Campground','El Dorado','Temple','Alien Temple','Petra','Victorian Architecture','Mayan Architecture','Incan Architecture','Celtic Architecture','Futuristic Architecture','Favela','Alleyway',
+'Smalltown','Abandoned City','Pyramids','Dam','Colliseum','Statues','Religious Statues','Alters','Sphynx','Monument','Battlefield','Bridge','Walkbridge','Egyptian Architecture','Roman Architecture','Rice Paddy','Angkor Wat',
+'Chinese Architecture','Indian Architecture','Arabic Architecture','Steampunk Architecture','Floating City','Giant Highway','Underwater Sculpture','Atlantis','Fighting Pit','Lighthouse','Trade Route','Inn','Brothel','Gas Station',
+'Speakeasy','Backyard','Factory','City of Stone','Halo Ring','Moon-Sized Spaceship','Tokyo','New York','Dubai','Futuristic Car','Old-Fashioned Car','Muscle Car','Steamboat','Train','Railroad','Trainstation','1920s City','ancient city',
+'first-tenth century','tenth-fifteenth century','fifteenth-twentieth century','Long Hall','Carriage','Russian Architecture','Anceint Architecture','Resort','Tourist Spot','Crumbled Building','Steampunk Architecture','Horror Architecture',
+'Western Architecture','tank','warzone','battlefield','dark city','cafe','country road','telephone lines','electric towers','streetlights','white picket fence house','transylvania','Rusting Military Vehicles','civilization ruins',
+'ancient civilization ruins','alien ruins','Venice Style City','Treehouse','Saloon','Bar','Haunted Forest','house','home','run down house','marina','pirate cove','neon city','windmill','helipad','pier','Sunken ship','moving castle',
+'overpass','amusement park','moonbase','summer camp','ritual site','park','garden','airship','hot air balloon','gazebo','swimming pool','quarry','mine','spookhouse','graveyard','Alley','asian temple','religious temple','bazaar',
+'robotic nature','motorcyclist','explorer','trader','trading post','gate','walls','castle walls','statue','memorial','civilization ruins','wonder ruins','barn','greenhouse','shed','stable','skyscraper','skyscrapers','villa','school',
+'broadway','prison','watertower','church','american colonial architecture','cottage','turf house','geodesic dome','ancient priors','hanok','igloo','log cabin','Tipi','totem pole','longhouse','Minka','roundhouse','YaoDong','ziggurat',
+'cathedral','Haggia Sophia-like','steampunk city','ancient city','skyscraper','giant statue','meiji palace-like','pagoda','abu simbai','Steampunk House','Cyberpunk House','Cyberpunk City','Hillbilly Town','Crumbling Walls',
+'lumberyard','military base','oil refinery','planet mine','space military base','Japanese Architecture','Chinese Architecture','African Architecture','Mesopotamian Architecture','Egyptian Architecture','Mayan Architecture',
+'Greek Architecture','Inca Architecture','Myanmar Architecture','Cambodian Architecture','White Marble Cathedral','Underwater Ruins','Sailboat','Ironclad','Pontoon Boat','Yacht','Canoe','Turtle Ship','Galleon','Galley','Gondola',
+'Houseboat','Longship','Quinquereme','Pirate Cove','Dock','Harbor','Medieval Town','Medieval Harbor','Medieval Castle','Medieval Market','Medieval Farm','Medieval Battle','Medieval Camp','Medieval House',
+'Thatch House','Stone Carvings','Sacred Tree','City Alleyway','Tsukiyama','Chaniwa','Zen Garden','Karesansui','Paradise Garden','Chinese Temple','City Built Into Mountain','Temple Built Into Mountain',
+'Abandoned Hospital','Abandoned Building','Giant Fossil','Chateau','Flower Farm','Throne Room','Coronation',
+
+
+
+  ];
+      var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+      while (i-- > min) {
+          index = Math.floor((i + 1) * Math.random());
+          temp = shuffled[index];
+          shuffled[index] = shuffled[i];
+          shuffled[i] = temp;
+      }
+  document.getElementById("uemo").innerHTML=shuffled.slice(min);
+  }
+
+  </script>
+<div>
+  <script>
+
+  function getRandomArrayElementc(count) {
+
+
+  var arr = ['Noon','Morning','Sunrise','Afternoon','Magic Hour','Sundown','Night','Twilight','Aurora','Late Night','Noon','Noon','Noon','Noon','Noon','Noon','Noon',
+'Morning','Morning','Morning','Morning','Morning','Morning','Sunrise','Sunrise','Sunrise','Sunrise','Sunrise','Sunrise','Sunrise','Afternoon','Afternoon','Afternoon','Afternoon',
+'Afternoon','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour',
+'Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Magic Hour','Sunset','Sunset','Sunset','Sunset','Sunset',
+'Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Night','Sunset','Sunset',
+'Twilight','Twilight','Twilight','Twilight','Twilight','Aurora','Aurora','Aurora','Late Night','Late Night','Late Night','Late Night','Eclipse','Broad Daylight','Broad Daylight',
+'Broad Daylight','Broad Daylight','Broad Daylight','Broad Daylight','Broad Daylight','Full Moon','Full Moon','Full Moon','Dusk','Dusk','Dusk','Dusk','Dusk','Nightfall','Nightfall',
+'Starry Night','Starry Night','Starry Night','Starry Night','Starry Night','Starry Night','Starry Night','Moonlit','Blood Moon','New Moon','New Moon','New Moon','Waxing Crescent','Waxing Gibbous',
+'First Quarter Moon',
+
+
+
+  ];
+      var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+      while (i-- > min) {
+          index = Math.floor((i + 1) * Math.random());
+          temp = shuffled[index];
+          shuffled[index] = shuffled[i];
+          shuffled[i] = temp;
+      }
+  document.getElementById("zemo").innerHTML=shuffled.slice(min);
+  }
+
+  </script>
+
+  <script>
+
+  function getRandomArrayElementd(count) {
+
+
+  var arr = ['Clear Skies','Clear Skies','Clear Skies','Clear Skies','Clear Skies','Clear Skies','Clear Skies','Clear Skies','Clear Skies','Clear Skies',
+'Partly Cloudy','Partly Cloudy','Partly Cloudy','Partly Cloudy','Partly Cloudy','Partly Cloudy','Partly Cloudy','Partly Cloudy','Partly Cloudy','Cloudy','Cloudy',
+'Cloudy','Cloudy','Cloudy','Cloudy','Cloudy','Cloudy','Cloudy','Cloudy','Cloudy','Overcast','Overcast','Overcast','Overcast','Overcast','Partly Cloudy','Partly Cloudy','Partly Cloudy',
+'Overcast','Overcast','Storm Approaching','Storm Approaching','Storm Approaching','Sprinkle','Sprinkle','Sprinkle','Sprinkle','Raining','Raining','Raining','Raining','Raining',
+'Raining','Raining','Downpour','Downpour','Downpour','Light Flurry','Light Flurry','Light Flurry','Light Flurry','Thunderstorm','Thunderstorm','Thunderstorm','Thunderstorm',
+'Hurricane','Tornado','hail','duststorm','Fog','Fog','Fog','Fog','Mist','Mist','Mist','Freezing Rain','Snowstorm','Snowstorm','Snowstorm','Clear Skies','Clear Skies','Cloudy',
+'Windy','Windy','Windy','Windy','Extremely Windy','Dust','Sandstorm','Sandstorm','Haze','Haze','Pollution','Pollution','Radioactive','Squall','Dust Storm','Waterspout',
+'Low Level Clouds','Mid Level Clouds','High Clouds',
+
+
+
+  ];
+      var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+      while (i-- > min) {
+          index = Math.floor((i + 1) * Math.random());
+          temp = shuffled[index];
+          shuffled[index] = shuffled[i];
+          shuffled[i] = temp;
+      }
+  document.getElementById("temo").innerHTML=shuffled.slice(min);
+  }
+
+  </script>
+<p>If you'd like to donate, follow the link below to my paypal!</p>
+  <div class="wrapper">
+  <input class="buttonz" type="button" value="Donate" onclick=" window.open('https://account.venmo.com/u/Brian-Traynor-2','_blank')">
+  <p id="wemo" class="wemo"></p>
+
+
+  </div>
+</body>
+</html>
